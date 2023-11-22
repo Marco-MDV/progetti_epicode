@@ -51,18 +51,14 @@ img{
     align-self: center;
     height:600px;
     width:600px;
-    object-fit: cover     
-}
-.div3_1 > p{
-    align-self: center; 
-}
-.div3_1 > img{
+    object-fit: cover;
     margin: 0px;
     padding: 0px;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
 }
 #p2{
+    align-self: center; 
     margin-top: 25px;
     color: #969696;
 }
