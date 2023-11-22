@@ -60,12 +60,13 @@ img{
     align-self: center; 
 }
 .div3_1 > img{
-    margin-bottom: 0px;
+    margin: 0px;
+    padding: 0px;
     border-radius: 20px;
-    box-shadow: 10px 10px 10px 0.5 rgba(36, 35, 35, 0.5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
 }
 #p2{
-    margin-top: 0px;
+    margin-top: 25px;
     color: #969696;
 }
 #div3_2{
