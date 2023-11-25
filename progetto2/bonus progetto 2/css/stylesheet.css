@@ -1,0 +1,106 @@
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: #ebeded;
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+span{
+    margin: 0;
+    padding: 0;
+}
+#contaniorePrincipale{
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+}
+#gamingi{
+    height: 60%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: start;
+}
+#Comfy{
+    height: 60%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: start;
+}
+#gifts{
+    height: 60%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: start;
+}
+#joy{
+    height: 60%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: start;
+}
+
+.contenitore_foto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+}
+
+#imag{
+    height: 40%;
+    width: 40%;
+    background-color: black;
+    object-fit: cover;
+}
+#set_img{
+    height: 100%;
+    width: 100%;
+}
+#p{
+    text-align: center;
+}
+#h1{
+    text-align: left;
+    padding-left: 5%;
+    margin: 5%;
+    font-size: 150%;
+}
+#a{
+    text-align: left;
+    color: rgb(0 111 132);
+    text-decoration: none;
+}
+#new{
+    position:fixed;
+    top: 42%;
+    left: 34%;
+    width: 4%;
+    height: 7%;
+}
+#new_2{
+    position:fixed;
+    top: 69%;
+    left: 44%;
+    width: 4%;
+    height: 7%;
+}
+#new_3{
+    position:fixed;
+    top: 42%;
+    left: 58%;
+    width: 4%;
+    height: 7%;
+}
