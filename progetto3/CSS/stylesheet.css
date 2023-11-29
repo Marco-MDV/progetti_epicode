@@ -46,12 +46,12 @@ img:hover {
   position: absolute;
   top: 0;
   right: 3%;
-  transform: translateY(-100%); 
+  transform: translateY(-25%); 
   visibility: hidden; 
 }
 
 .container_2:hover  > .container_3{
-  transform: translateY(10%);
+  transform: translateY(20%);
   transition: transform 1s ease-in-out;
   visibility: visible;
 }
@@ -63,12 +63,12 @@ img:hover {
   width: 100%;
   bottom: 3%;
   border: 0px;
-  transform: translateY(200%);
+  transform: translateY(25%);
   visibility: hidden; 
 }
 
 .container_2:hover  > .container_4{
-  transform: translateY(10%);
+  transform: translateY(-40%);
   transition: transform 1s ease-in-out;
   visibility: visible;
 }
