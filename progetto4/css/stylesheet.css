@@ -1,0 +1,510 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: white;
+    height: 100px;
+    display: flex;
+    z-index: 3;
+    box-shadow: 0px 20px 18px #8888882e;
+    position: relative;
+}
+
+.div2 {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo_figure {
+    margin: 0;
+    padding: 0;
+    max-width: 300px;
+    max-height: 500px;
+    position: absolute;
+    top:20%;
+    left: 9%;
+}
+
+.imgMediumLogo {
+    height: 100%;
+    width: 100%;
+}
+.div_nav_containe{
+    position: absolute;
+    top:20%;
+    right: 9%;
+
+}
+.div_1_figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div_1_figure > ul{
+    list-style: none;
+    display: flex;
+    font-size: 20px;
+    gap: 20px;
+    color: grey;
+}
+.div_1_figure > button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    font-size: 15px;
+}
+.user{
+    background-color: orange;
+    border-radius: 100%;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.div_1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+button {
+    border: 1;
+    padding: 10px;
+    border-radius: 20px;
+    margin-left: 20px;
+    background-color: white;
+}
+
+button>p {
+    font-size: 80%;
+}
+
+.div_fotoPersona {
+    background-color: orange;
+    margin-left: 20px;
+    border-radius: 50%;
+    padding: 0 10px;
+    width: 30px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div_1_2 {
+    padding-right: 8%;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 20px;
+}
+
+.div_fotoPersona>p {
+    color: white;
+    font-size: 25px;
+}
+
+.div_1_icon {
+    font-size: 21px;
+    margin-left: 10px;
+}
+
+main {
+    border-right: solid lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+aside {
+    max-width: 500px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+section {
+    width: 70%;
+    margin-top: 5%;
+    border-bottom: solid lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: end;
+}
+
+article {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.p_section {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.p_section_2{
+    display: flex;
+    gap: 40px;
+}
+
+/* .p_section_1:hover{
+    font-weight: bold;
+    color: black;
+    border-bottom: 2px solid black;
+    display: flex;
+    position: absolute;
+    bottom: -2.5px;
+    left: 0px;
+} */
+.p_section_1{
+    border-bottom: 1px solid transparent;
+    display: flex;
+    position: absolute;
+    left: 0px;
+    bottom: -2px;
+}
+.p_section_1:hover{
+    border-bottom: 2px solid black;
+    font-weight: bold;
+}
+.p_section_2{
+    border-bottom: 1px solid transparent;
+    display: flex;
+    position: absolute;
+    left: 100px;
+    bottom: -2px;
+}
+.p_section_2:hover{
+    border-bottom: 2px solid black;
+    font-weight: bold;
+}
+
+.article_div {
+    margin-top: 2%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 10%;
+}
+
+.article_div>p {
+    margin: 0;
+}
+
+.article_div_2>h2 {
+    margin-top: 1%;
+}
+
+h2 {
+    margin: 0;
+}
+
+.article_div_2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.min_logo {
+    width: 30px;
+    height: 30px;
+    margin: 0px 2% 0px 0px;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.logo_img {
+    width: 100%;
+    height: 50%;
+}
+
+.article_div_2>p {
+    width: 100%;
+    font-size: 20px;
+    margin: 0;
+}
+
+.article_div>h2 {
+    margin-top: 1%;
+}
+
+.img_article {
+    width: 20%;
+    height: 100%;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.info_2>p {
+    color: grey;
+
+}
+
+.info_2 {
+    width: 90%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.slect {
+    background-color: lightgrey;
+    padding: 1%;
+    border-radius: 40px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.icon_select {
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+.info_1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.container_1_aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    width: 90%;
+    border: lightgray;
+    border-bottom: solid lightgray;
+}
+.div_img_aside{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.figure_aside{
+    padding: 0;
+    margin: 0;
+    width: 60px;
+    height: 60px;
+    margin-right: 5px;
+}
+.img_aside{
+    height: 100%;
+    width: 100%;
+}
+.img_plus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+.button_under_twitter{
+    height: 25%;
+    border-radius: 20px;
+    background-color: transparent;
+    margin: 0;
+    border: 1px solid black;
+}
+a{
+    color: lightgray;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+.container_1_aside>p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.div_topic{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 90%;
+}
+.div_topic > h4{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.button_topic{
+    background-color: lightgray;
+    color: grey;
+    border: 0;
+    padding: 15px;
+    font-size: 15px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3px;
+}
+.button{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.img_follow{
+    width: 50px;
+    height: 50px;
+}
+.img_follow_1{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+.person_1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.info_persona{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.info_persona>h3{
+    margin: 0;
+    text-align: start;
+}
+.info_persona>p{
+    font-size: 13px;
+    margin: 0;
+}
+
+.person_1>button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid black;
+    font-size: 15px;
+    margin: 0;
+}
+.div_who_to_follow{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 30px;
+}
+.div_who_to_follow>p{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-weight:bold;
+}
+.person_1>span>p{
+    margin: 0 0 0 8px;
+}
+.person_1>span>h3{
+    margin: 0 0 0 8px;
+}
+.Recently_saved{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 20px;
+}
+.container_img_Recently_saved{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    
+}
+.Recently_saved_container{
+    margin-top: 15px;
+}
+.p_1_saved{
+
+    font-weight:bold;
+    font-size: 15px;
+    margin: 0;
+}
+.Recently_saved>.Recently_saved_container>h3{
+    margin: 0px 0px 5px 0px;
+}
+.under{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    color: grey;
+}
+.under>div{
+    font-size: 15px;
+}
+.Recently_saved_container_3{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.Recently_saved_container_3>a{
+    color: lime;
+}
+.Recently_saved>ul{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+    color: gray;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 20px 0px 0px 0px;
+}
