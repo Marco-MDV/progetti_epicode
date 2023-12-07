@@ -9,11 +9,18 @@
 
 # Risposte:
 1. i principali datatype in JavaScript sono:
+
 -string
+
 -number
+
 -boolean
+
 -null
+
 -undefined
+
+
 2. un ogetto è un'entita complessa o meglio definibile come un contenitore, contenete più tipi di variabili di diverso tipo a suo interno e quindi complesso.
 3.  console.log(12+20);
 4. let x = 12
