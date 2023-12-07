@@ -20,14 +20,19 @@
 5. let name = 'marco'
 6. console.log(4-x);
 7. caso 1:
+
 let name1 = 'john'; 
+
 let name2 = 'John';
 
 console.log(name1 == name2);
 
+
 caso 2:
-let name1 = 'john'; 
+let name1 = 'john';
+
 let name2 = 'John';
+
 let name2low = name2.toLowerCase();
 
 console.log(name1 == name2low);
