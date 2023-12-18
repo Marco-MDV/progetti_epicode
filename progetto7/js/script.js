@@ -6,9 +6,9 @@ if (valore1 > valore2) {
     console.log('il valore: ' + Number(valore1) + ' è il più grande di: ' + Number(valore2));
 } else if (valore1 < valore2) {
     console.log('il valore: ' + Number(valore1) + ' è più piccolo di: ' + Number(valore2));
-} else if (valore1 == valore2){
+} else if (valore1 == valore2) {
     console.log('il valore: ' + Number(valore1) + ' è ugaule a: ' + Number(valore2));
-}else{
+} else {
     console.log('perfavore inserire inserisi dei valori validi');
 }
 
@@ -32,7 +32,7 @@ if (valore < 5) {
 /* ESERCIZIO 3 */
 /* caso con il statement continue */
 
-let contineCase="";
+/* let contineCase="";
 
 for (i = 0; i <= 10; i++){
     if (i === 3){
@@ -42,14 +42,21 @@ for (i = 0; i <= 10; i++){
     }
     contineCase = contineCase + i;
 }
-console.log(contineCase);
+console.log(contineCase); */
 
 /* caso alternativo */
 
-for (i = 0; i <= 10; i++) {
-    if (i != 3 && i != 8) {
+/* for (i = 0; i <= 10; i++) {
+    if (i != 3 && i != 5) {
         console.log(i);
     };
+} */
+
+for (let i = 0; i <= 10; i++) {
+    if (i === 3 || i === 8){
+        continue;
+    }
+    else console.log(i);
 }
 
 
