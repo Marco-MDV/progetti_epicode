@@ -54,7 +54,7 @@ for (const persone of [marco, paul, amy]) {
 
 /*Seconda parte */
 
-/* let statusUser = []
+let statusUser = []
 let onlyAmbassador = []
 
 
@@ -91,6 +91,6 @@ for(let sU of statusUser){
         console.log(sU.name + ' ' + sU.lastName + " non e' un ambassador");
     }
 
-} */
+}
 
-/* console.log(onlyAmbassador); */
+console.log(onlyAmbassador);
