@@ -13,8 +13,7 @@ crazySum(8,9)
 
 /* ex:2 */
 function boundary(x) {
-    /* variabbile da modificare per verificare il codice*/
-
+    
     function isInteger(value) {
         return Number.isInteger(value);
     }
