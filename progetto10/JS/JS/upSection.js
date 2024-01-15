@@ -1,13 +1,11 @@
 const body = document.querySelector('body')
 
-function upSection(){
-    const header  = document.createElement('header')
+function upSection() {
+    const header = document.createElement('header')
     body.appendChild(header)
-    
+
     const main = document.createElement("main")
     body.appendChild(main)
-
-    
 
     const brandeName = document.createElement('h1')
     brandeName.innerText = ('Amazon 2.0')
@@ -16,12 +14,14 @@ function upSection(){
     const table = document.createElement('section')
     main.appendChild(table)
 
+
+
     itemsCard.forEach(element => {
         const Card = document.createElement('div')
         table.appendChild(Card)
 
         const img = document.createElement('img')
-        
+
         const titleElement = document.createElement('h2')
 
         const descriptionElement = document.createElement('p')
@@ -35,19 +35,28 @@ function upSection(){
         const inputUser = document.createElement('input')
 
         const priceItem = element.price
-        
-        
+
+
 
         titleElement.textContent = element.title;
         img.src = element.Image;
         descriptionElement.textContent = element.description;
-        descriptionPriceElement.innerHTML = 'questo è il prezzo del prodotto:  <span>'+priceItem+'</span>';
-        descriptionLinkForProdact.innerHTML = 'questo è il link per il prodotto: <a>'+linkForProdact+'</a>';
-        linkForProdact.href=element.link;
+        descriptionPriceElement.innerHTML = 'questo è il prezzo del prodotto:  <span>' + priceItem + '</span>';
+        descriptionLinkForProdact.innerHTML = 'questo è il link per il prodotto: <a>' + linkForProdact + '</a>';
+        linkForProdact.href = element.link;
         linkForProdact.textContent = 'Link'
         inputUser.type = 'text'
         inputUser.placeholder = 'inserisci un tuo feedback'
-        
-        Card.append(img,titleElement,descriptionElement,descriptionPriceElement,descriptionLinkForProdact,linkForProdact,inputUser)
+
+        Card.append(img, titleElement, descriptionElement, descriptionPriceElement, descriptionLinkForProdact, linkForProdact, inputUser)
     });
-}upSection()
+
+    const buttonBot = document.createElement('button');
+    const containerBot = document.createElement('div');
+    buttonBot.classList.add('buttonBotClass')
+    containerBot.classList.add('container')
+    buttonBot.textContent = 'Help'
+    main.append(buttonBot, containerBot)
+
+
+} upSection()

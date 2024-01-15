@@ -3,6 +3,7 @@ function downSection(){
     body.appendChild(footer)
 
     const buttonMode = document.createElement('button')
+    buttonMode.classList.add('buttonChange')
 
     const Mail = document.createElement('p')
 

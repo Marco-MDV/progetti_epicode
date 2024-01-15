@@ -4,13 +4,13 @@ function changeH1() {
         titolo.textContent = 'Buon natale da Amazon2.0'
     })
 
-}changeH1()
+} changeH1()
 
 function buttonoChangeMode() {
     const body = document.querySelector('body')
-    const butto = document.querySelector('button');
+    const butto = document.querySelector('.buttonChange');
     butto.addEventListener('click', () => {
-        body.classList.toggle('Black')
+        body.classList.toggle('changeMode')
     })
 } buttonoChangeMode()
 
@@ -45,13 +45,15 @@ function changeColor() {
     const color = document.querySelectorAll('div span')
     color.forEach(element => {
         element.addEventListener('click', () => {
-            const prova = ['red', 'green', 'blue', 'yellow','pink']
-            const randomcolor = Math.floor(Math.random()*prova.length)
+            const prova = ['red', 'green', 'blue', 'yellow', 'pink']
+            const randomcolor = Math.floor(Math.random() * prova.length)
             const randomelement = prova[randomcolor]
-            console.log(element.style);
-            element.style.color=`${randomelement}`;
+            element.style.color = `${randomelement}`;
         })
     });
 } changeColor()
+
+
+
 
 

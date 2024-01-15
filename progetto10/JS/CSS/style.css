@@ -1,4 +1,4 @@
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     display: flex;
@@ -8,7 +8,7 @@ body{
     height: 100vh;
 }
 
-section{
+section {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
@@ -17,7 +17,8 @@ section{
     padding-bottom: 5px;
     min-height: calc(100vh - 135px);
 }
-section div{
+
+section div {
     border: 1px lightgray solid;
     border-radius: 10px;
     padding: 10px;
@@ -27,15 +28,18 @@ section div{
     flex-direction: column;
     box-shadow: 1px 1px 20px 0px;
 }
-img{
+
+img {
     max-width: 300px;
     max-height: 200px;
     opacity: 1;
 }
-a{
+
+a {
     text-decoration: none;
 }
-footer{
+
+footer {
     background-color: lightgray;
     width: 100%;
     display: flex;
@@ -43,28 +47,154 @@ footer{
     align-items: center;
     flex-wrap: wrap;
 }
-.Black{
+
+.changeMode {
     background-color: #1D1B15;
     color: white;
 }
-.link{
+
+.link {
     color: pink;
 }
-.visibilita{
+
+.visibilita {
     opacity: 0;
 }
-.red{
+
+.red {
     color: red;
 }
-.green{
-    color:green ;
+
+.green {
+    color: green;
 }
-.blue{
+
+.blue {
     color: blue;
 }
-.yellow{
-    color:yellow;
+
+.yellow {
+    color: yellow;
 }
-.pink{
+
+.pink {
     color: pink;
+}
+
+
+.buttonBotClass {
+    position: fixed;
+    margin: 5px 0 15px 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ffffff;
+    ;
+    box-shadow: 1px 1px 5px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 50px;
+    right: 25px;
+}
+
+.backBot p {
+    font-weight: bold;
+    margin: 17px;
+}
+
+.backChat {
+    width: 240px;
+    height: 439px;
+    border: 1px lightgray solid;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 20px 0px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-wrap: wrap;
+    background-color: lightgray;
+}
+
+.hide {
+    display: none;
+}
+
+.buttonBotClassStartChat {
+    position: fixed;
+    top: 10%;
+    left: 20%;
+    opacity: 0;
+}
+
+.pov {
+    background-color: aquamarine;
+    width: 200px;
+    height: 200px;
+}
+
+.backChat div {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    gap: 5px;
+}
+
+.backChat div button {
+    width: 100px;
+    text-align: start;
+    box-shadow: 2px 2px 11px 0px;
+}
+
+.bgChat{
+    height: 70%;
+    width: 70%;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: scroll;
+}
+/* message me */
+.messageUser{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.messageUser div{
+    max-width: 15px;
+    max-height: 15px;
+}
+.messageUser p{
+    margin: 0;
+    padding: 2px;
+    border-radius: 10px;
+    background-color: lightgrey;
+}
+
+
+/* message bot */
+.messageBot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.messageBot div{
+    max-width: 15px;
+    max-height: 15px;
+}
+.messageBot p{
+    margin: 0;
+    padding: 2px;
+    border-radius: 10px;
+    background-color: lightgrey;
 }
