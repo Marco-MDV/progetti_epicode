@@ -1,0 +1,77 @@
+/* ESERCIZIO 1 */
+
+body>div>div>div > h1{
+    background-color: blue  !important;
+}
+
+/* ESERCIZIO 2 */
+
+body > div nav span{
+    background-color: red !important;
+}
+
+/* ESERCIZIO 3 */
+
+body>div>div>div p>a{
+    background-color: yellow !important;
+}
+
+/* ESERCIZIO 4 */
+
+main > div > div > div:first-of-type{
+    background-color: aquamarine !important;
+}
+
+/* ESERCIZIO 5 */
+
+main > div > div > div:first-of-type > hr{
+    background-color: red;
+}
+
+/* ESERCIZIO 6 */
+
+body>div>header>div div a:nth-child(even) {
+    background-color: yellow !important;
+}
+
+/* ESERCIZIO 7 */
+
+aside div:nth-child(2) ol li {
+    background-color: yellow;
+}
+
+/* ESERCIZIO 8 */
+
+main > div > div > div:nth-child(3) h2 + p a{
+    background-color: blueviolet;
+}
+
+/* ESERCIZIO 9 */
+
+main > div > div div:last-of-type ul li:nth-child(2){
+    background-color: yellowgreen;
+}
+
+/* ESERCIZIO 10 */
+
+body > a{
+    background-color: aqua;
+}
+
+/* ESERCIZIO 11 */
+
+main div > div nav > a:last-child{
+    background-color: blue  !important;
+} 
+
+/* ESERCIZIO 12 */
+
+footer p a:last-child{
+    background-color: brown;
+}
+
+/* ESERCIZIO +1 */
+
+aside div:nth-child(3) ol li:nth-child(2) {
+    background-color: blue;
+}
