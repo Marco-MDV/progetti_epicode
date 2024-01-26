@@ -11,6 +11,13 @@ function removeTwitter(){
 function removeContinuaALeggere(){
     const father = document.querySelector('body>div>div>div p:last-of-type')
     const jumbotron = document.querySelector('body>div>div>div p>a')
+    const row = document.querySelectorAll('body>div>div:last-of-type div > div a')
+    
+    row.forEach((element)=>{
+        element.addEventListener('click',()=>{
+            element.parentNode.innerHTML=' '
+        })
+    })
 
     jumbotron.addEventListener('click',()=>{
         father.innerHTML=' '
