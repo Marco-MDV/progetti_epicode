@@ -1,0 +1,142 @@
+body{
+    background-color: #FBF7E3;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+    width: 100%;
+    
+}
+.containerNavSection{
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+nav button{
+    background-color: #F3DF85;
+    color: #632306;
+    border-color: transparent;
+    min-width: 80px;
+    min-height: 35px;
+    border-radius: 20px;
+}
+.specialButton{
+    background-color: #F3DF85;
+    color: #632306;
+    border-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 150px;
+    min-height: 50px;
+    border-radius: 40px;
+    font-weight: bolder;
+    padding: 10px;
+}
+.specialButton figure{
+    margin: 0;
+    width: 30px;
+}
+.specialButton figure img{
+    width: 100%;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.WelcomeSection{
+    text-align: center;
+}
+.WelcomeSection h1{
+    color: #632306;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.sectionDescription{
+    display: flex;
+    flex-direction:  row-reverse;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.titleDescription{
+    color: #632306;
+    font-size: 40px;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+
+.containerBio{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.description{
+    width: 50%;
+}
+
+.figureImgHoney{
+    margin: 0;
+    width: 400px;
+}
+
+.imgHoney{
+    width: 100%;
+    object-fit: cover;
+}
+
+.sectionDescription{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.containerCard{
+    background-color: #f5edc3;
+    width: 300px;
+    height: 300px;
+    border-radius: 40px;
+    text-align: center;
+}
+
+.figureImgHoneyCard{
+    margin: 0;
+    width: 100%;
+    height: 50%;
+}
+
+.ImgHoneyCard{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px 40px 0 0;
+}
+
+.conatinerDescriptionItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    padding: 3%;
+}
+
+.buttonForBuy{
+    background-color: #F3DF85;
+    color: #632306;
+    border-color: transparent;
+    min-width: 80px;
+    min-height: 35px;
+    border-radius: 20px;
+}
