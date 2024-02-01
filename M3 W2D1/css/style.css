@@ -1,106 +1,28 @@
 body{
-    background-color: #2B292E;
     height: 100vh;
 }
+
+.link{
+    color: white;
+    text-decoration: none;
+}
+
+.cardImg{
+    min-height: 200px;
+    height: 100%;
+    object-fit: cover;
+}
+
 main{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 90%;
+    height:calc(100vh - -792px);
 }
 
-
-/* welcome section */
-
-.welcomeSection{
-    text-align: center;
+#MentreTuttoScorre{
+    height: calc(100vh - 96px);
 }
 
-h1{
-    color: whitesmoke;
-}
-.welcomeSection p{
-    color: whitesmoke;
+.specialCard{
+    max-width: 300px;
+    min-height: 200px;
 }
 
-/* section cards */
-.cards{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-
-.card{
-    width: 200px !important;
-    height: 410px !important;
-    background-color: #2B292E !important;
-    border-color: whitesmoke;
-
-}
-
-.card ul li{
-    background-color: #2B292E !important;
-    color: whitesmoke;
-    border-color: whitesmoke;
-}
-
-
-/* special heught */
-
-.specialHeught{
-    height: 430px !important;
-}
-
-/* button song */
-
-.conatinerPlayButton{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-}
-
-.topSection{
-    width: 40%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.conatinerPlayButton .topSection button{
-    border-color: transparent;
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-}
-
-.downSectio{
-    width: 60%;
-}
-/* tablet o slim */
-
-@media (max-width: 768px) {
-    .cards{
-        gap: 80px;
-    }
-}
-
-
-/* smartphone */
-
-@media (max-width: 767px) {
-    .cards{
-        gap: 10px 
-    }
-    .card {
-        width: 150px !important;
-        height: 410px !important;
-    }
-}
