@@ -1,0 +1,19 @@
+nav{
+    height: 70px;
+}
+.bgNav{
+    color: white;
+    background-image: linear-gradient(360deg,white,#027BFF);
+}
+.logo{
+    min-width: 100px;
+}
+.imgLogo{
+    width: 100%;
+    object-fit: cover;
+}
+
+.iconaNav{
+    width: 25px;
+    height: 25px;
+}
