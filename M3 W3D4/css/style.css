@@ -98,6 +98,9 @@ figure{
 }
 
 /* main */
+main{
+    overflow-x: hidden;
+}
 
 .hero{
     background-color: #754ffe;
@@ -202,6 +205,9 @@ figure{
 
 /* effect card */
 
+.carousel-inner{
+    overflow:visible;
+}
 
 .card:hover{
     animation: bigger 0.7s ease-in-out;
