@@ -49,6 +49,12 @@ figure{
     color: #A8A3B9;
 }
 
+.hamburger{
+    color: #754ffe;
+    border: 1px solid #754ffe;
+    border-radius: 8px;
+}
+
 /* notification */
 
 .bgnotification{
