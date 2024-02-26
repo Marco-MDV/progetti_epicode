@@ -1,0 +1,223 @@
+/* general */
+
+@font-face {
+    font-family: 'netflix-regular';
+    src: url('../assets/netflix-sans-font/NetflixSans-Regular.woff2') format('.woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'netflix-medium';
+    src: url('../assets/netflix-sans-font/NetflixSans-Medium.woff2') format('.woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'netflix-light';
+    src: url('../assets/netflix-sans-font/NetflixSans-Light.woff2') format('.woff2');
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: 'netflix-bold';
+    src: url('../assets/netflix-sans-font/NetflixSans-Bold.woff2') format('.woff2');
+    font-weight: bold;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #141414;
+    color: white;
+    font-family: 'netflix-regular', sans-serif;
+}
+
+
+.containerImgLogo {
+    width: 100px;
+    height: 45px;
+}
+
+.listHeader {
+    font-size: 13px;
+    color: lightgray;
+}
+
+.listHeader li:hover {
+    font-weight: bolder;
+    color: currentColor;
+}
+
+.containerAvatart {
+    width: 30px;
+    height: 30px;
+}
+
+.dropdown div ion-icon {
+    color: white;
+}
+
+/* nav */
+
+.buttonGenres {
+    font-size: 15px;
+    font-weight: bolder;
+    border: 1px solid white;
+    background-color: black;
+}
+
+.buttonMoreOption {
+    font-size: 10px;
+    border: 1px solid lightgray;
+    background-color: #141414;
+}
+
+.buttonMoreOption ion-icon {
+    color: lightgray;
+}
+
+.colorButtonMoreOption {
+    border: 1px solid white;
+
+}
+
+.colorIconMoreOption {
+    color: white !important;
+}
+
+/* swipe */
+.swiper {
+    width: 100%;
+    height: 226px;
+    overflow: visible !important;
+    
+}
+
+/* le card sono altre 130px altezza e 231 larghezza */
+
+.swiper-slide{
+    width: 231px !important;
+    border-radius: 8px;
+}
+
+.pov{
+    overflow: hidden;
+}
+.InfoCardNetflix{
+    border-radius: 0px 0px 8px 8px;
+    background-color: #141414;
+    transform: scale(0);
+}
+
+.cardNetflix{
+    border-radius: 20px;
+}
+
+/* HOVER */
+.cardNetflix:hover{
+    animation: scaleShadow 0.1s ease-in-out forwards, scale 0.1s ease-in forwards;
+    z-index: 2;
+    & .containerCardFilm img{
+        border-radius: 8px 8px 0 0;
+    }
+    & .InfoCardNetflix{
+        animation: scaleInfo 0.01s ease-in-out forwards;
+    }
+}
+
+
+@keyframes scaleShadow {
+    from{
+        transform: scale(1);
+        border-radius: 8px;
+        box-shadow: 0px 0px black;
+    }to{
+        transform: scale(1.3);
+        border-radius: 8px;
+        box-shadow: 0px 0px 12px 1px black;
+    }
+}
+
+@keyframes scaleInfo {
+    from{
+        transform: scale(0)
+    }to{
+        transform: scale(1);
+    }
+}
+
+/* BACK HOVER */
+
+
+.containerCardFilm {
+    width: 231px;
+    height: 130px;
+}
+
+.containerCardFilm img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.swiper-button-prev{
+    display: none !important;
+    color: white !important;
+    font-weight: bolder;
+}
+
+.swiper-button-next{
+    display: none !important;
+    color: white !important;
+    font-weight: bolder;
+}
+
+.colorArrow{
+    display: block !important;
+}
+
+
+/* animation card */
+
+
+
+
+
+/* footer */
+
+.containerIcon ion-icon{
+    font-size: 30px;
+    color: lightgray;
+}
+
+.infoList div a{
+    text-decoration: none;
+    color: lightgray;
+    padding-bottom: 10px;
+}
+
+.buttonFooter{
+    background-color:#141414;
+    color: lightgray;
+    border: 1px solid lightgray;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.copyright{
+    color: lightgray;
+    font-size: 10px;
+}
+
+@media screen and (max-width:600px) {
+    main{
+        height: calc(100vh - 300px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
