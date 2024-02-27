@@ -12,8 +12,8 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-
 function allFunction(){
+  scroll()
   hoverColorIcon()
   hoverCard()
   hoverSwiperRight();
@@ -41,7 +41,6 @@ function hoverCard(){
   })
 }
 
-
 function hoverColorIcon(){
   const buttons = document.querySelectorAll('.buttonMoreOption')
 
@@ -61,8 +60,6 @@ function hoverColorIcon(){
       })
     })
 }
-
-
 
 
 function hoverSwiperRight() {
@@ -111,3 +108,26 @@ function removePadding() {
     });
   });
 } 
+
+
+/* scrolling */
+
+function scroll(){
+  const elements = document.querySelectorAll('.hidden');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('hidden');
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+  
+  elements.forEach(element => {
+    observer.observe(element);
+  });  
+}
+
+

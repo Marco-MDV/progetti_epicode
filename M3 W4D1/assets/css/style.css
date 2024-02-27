@@ -103,39 +103,43 @@ body {
 
 /* le card sono altre 130px altezza e 231 larghezza */
 
-.swiper-slide{
+.swiper-slide {
     width: auto !important;
 }
 
-.cardNetflix{
+.cardNetflix {
     width: 231px !important;
     border-radius: 20px;
 }
 
-.InfoCardNetflix{
+.InfoCardNetflix {
     border-radius: 0px 0px 8px 8px;
     background-color: #141414;
     transform: scale(0);
 }
 
 
-.hoverCard{
+.hoverCard {
     animation: scaleAndShadow 0.1s ease-in-out forwards, scale 0.1s ease-in forwards;
     z-index: 2;
 }
-.hoverContainerCardFilm{
+
+.hoverContainerCardFilm {
     border-radius: 8px 8px 0 0 !important;
 }
-.hoverInfoCardNetflix{
+
+.hoverInfoCardNetflix {
     animation: scaleInfo 0.01s ease-in-out forwards;
 }
 
 @keyframes scaleAndShadow {
-    from{
+    from {
         transform: scale(1);
         border-radius: 8px;
         box-shadow: 0px 0px black;
-    }to{
+    }
+
+    to {
         transform: scale(1.2);
         border-radius: 8px;
         box-shadow: 0px 0px 12px 1px black;
@@ -143,9 +147,11 @@ body {
 }
 
 @keyframes scaleInfo {
-    from{
+    from {
         transform: scale(0)
-    }to{
+    }
+
+    to {
         transform: scale(1);
     }
 }
@@ -158,62 +164,74 @@ body {
     height: 130px;
 }
 
-.containerCardFilm img{
+.containerCardFilm img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
 }
 
-.swiper-button-prev{
+.swiper-button-prev {
     display: none !important;
     color: white !important;
     font-weight: bolder;
 }
 
-.swiper-button-next{
+
+.swiper-button-next {
     display: none !important;
     color: white !important;
     font-weight: bolder;
 }
 
-.colorArrow{
+.colorArrow {
     display: block !important;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    animation: scrollRow 0.4s ease-in forwards;
+}
+
+
+@keyframes scrollRow {
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 
 
 /* footer */
 
-.containerIcon ion-icon{
+.containerIcon ion-icon {
     font-size: 30px;
     color: lightgray;
 }
 
-.infoList div a{
+.infoList div a {
     text-decoration: none;
     color: lightgray;
     padding-bottom: 10px;
 }
 
-.buttonFooter{
-    background-color:#141414;
+.buttonFooter {
+    background-color: #141414;
     color: lightgray;
     border: 1px solid lightgray;
     font-size: 15px;
     font-weight: lighter;
 }
 
-.copyright{
+.copyright {
     color: lightgray;
     font-size: 10px;
 }
 
-@media screen and (max-width:600px) {
-    main{
-        height: calc(100vh - 300px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
