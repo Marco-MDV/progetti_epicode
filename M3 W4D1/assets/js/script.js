@@ -2,30 +2,44 @@ const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-  slidesPerView: 6,
-  spaceBetween: 5,
-  /* on: {
-    slideChange : function (){
-      hoverSwiperLeft('swipe')
-    }
-  }, */
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
+  slidesPerView: 8,
+  spaceBetween: 10,
+  
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
 });
+
+
+function allFunction(){
+  hoverColorIcon()
+  hoverCard()
+  hoverSwiperRight();
+  removePadding();
+  swiperMouseLeft()
+}allFunction()
+
+
+function hoverCard(){
+  const cardNetflix = document.querySelectorAll('.cardNetflix')
+  cardNetflix.forEach(element=>{
+    const figureNetflix = element.querySelector('.containerCardFilm')
+    const imgFigureNetflix = figureNetflix.querySelector('.containerCardFilm img')
+    const InfoCardNetflix = element.querySelector('.InfoCardNetflix')
+    figureNetflix.addEventListener('mouseover', ()=>{
+      element.classList.add('hoverCard')
+      imgFigureNetflix.classList.add('hoverContainerCardFilm')
+      InfoCardNetflix.classList.add('hoverInfoCardNetflix')
+    })
+    figureNetflix.addEventListener('mouseleave', ()=>{
+      element.classList.remove('hoverCard')
+      imgFigureNetflix.classList.remove('hoverContainerCardFilm')
+      InfoCardNetflix.classList.remove('hoverInfoCardNetflix')
+    })
+  })
+}
 
 
 function hoverColorIcon(){
@@ -46,7 +60,7 @@ function hoverColorIcon(){
         icon.classList.remove('colorIconMoreOption')
       })
     })
-}hoverColorIcon()
+}
 
 
 
@@ -65,33 +79,35 @@ function hoverSwiperRight() {
       nextButton.classList.remove('colorArrow');
     });
   });
-} hoverSwiperRight();
+} 
 
+function swiperMouseLeft(){
+  const swiperWrappers = document.querySelectorAll('.swiper');
 
-
-function hoverSwiperLeft(element){
-  if (element == 'swipe') {
-    console.log('si');
-  }else{
-    console.log('no');
-  }
+  swiperWrappers.forEach(element => {
+    const buttonSwipeRight = element.querySelector('.swiper-button-next');
+    const buttonSwipeLeft = element.querySelector('.swiper-button-prev');
+    buttonSwipeRight.addEventListener('click',()=>{
+      buttonSwipeLeft.classList.add('colorArrow')
+      element.addEventListener('mouseenter', () => {
+        buttonSwipeLeft.classList.add('colorArrow');
+      });
+  
+      element.addEventListener('mouseleave', () => {
+        buttonSwipeLeft.classList.remove('colorArrow');
+      });
+    })
+  });
 }
-
-
-
-
 
 function removePadding() {
   const swipers = document.querySelectorAll('.swiper'); 
 
   swipers.forEach(swiper => {
     const swiperRightButton = swiper.querySelector('.swiper-button-next'); 
-    const swiperLeftButton =swiper.querySelector('.swiper-button-prev')
 
     swiperRightButton.addEventListener('click', () => {
       swiper.classList.remove('ps-5'); 
-      const x = swiper.querySelector('.swiper-button-prev')
-      x.classList.add('colorArrow')
     });
   });
-} removePadding();
+} 

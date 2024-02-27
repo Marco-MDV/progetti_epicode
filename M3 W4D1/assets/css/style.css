@@ -88,54 +88,55 @@ body {
     color: white !important;
 }
 
+/* carousel */
+
+
+
 /* swipe */
+
+
 .swiper {
     width: 100%;
     height: 226px;
     overflow: visible !important;
-    
 }
 
 /* le card sono altre 130px altezza e 231 larghezza */
 
 .swiper-slide{
-    width: 231px !important;
-    border-radius: 8px;
+    width: auto !important;
 }
 
-.pov{
-    overflow: hidden;
+.cardNetflix{
+    width: 231px !important;
+    border-radius: 20px;
 }
+
 .InfoCardNetflix{
     border-radius: 0px 0px 8px 8px;
     background-color: #141414;
     transform: scale(0);
 }
 
-.cardNetflix{
-    border-radius: 20px;
-}
 
-/* HOVER */
-.cardNetflix:hover{
-    animation: scaleShadow 0.1s ease-in-out forwards, scale 0.1s ease-in forwards;
+.hoverCard{
+    animation: scaleAndShadow 0.1s ease-in-out forwards, scale 0.1s ease-in forwards;
     z-index: 2;
-    & .containerCardFilm img{
-        border-radius: 8px 8px 0 0;
-    }
-    & .InfoCardNetflix{
-        animation: scaleInfo 0.01s ease-in-out forwards;
-    }
+}
+.hoverContainerCardFilm{
+    border-radius: 8px 8px 0 0 !important;
+}
+.hoverInfoCardNetflix{
+    animation: scaleInfo 0.01s ease-in-out forwards;
 }
 
-
-@keyframes scaleShadow {
+@keyframes scaleAndShadow {
     from{
         transform: scale(1);
         border-radius: 8px;
         box-shadow: 0px 0px black;
     }to{
-        transform: scale(1.3);
+        transform: scale(1.2);
         border-radius: 8px;
         box-shadow: 0px 0px 12px 1px black;
     }
@@ -179,11 +180,6 @@ body {
 .colorArrow{
     display: block !important;
 }
-
-
-/* animation card */
-
-
 
 
 
