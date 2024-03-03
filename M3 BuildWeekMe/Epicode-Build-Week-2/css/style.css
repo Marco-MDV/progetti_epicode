@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root {
+    --pink: #F5385D;
+    --black: #212529;
+    --gray: #808080;
+    --black--light: #222;
+}
+
+figure{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    transition: all 250ms ease;
+}
+
+.roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* NAVBAR */
+.nav-logo {
+    width: 90px;
+    height: 45px;
+}
+
+.nav-link {
+    text-decoration: none;    
+}
+
+.iconNav{
+    color: #808080;
+    width: 30px;
+    height: 30px;
+}
+
+.logo--white {
+    width: 90px;
+}
+
+.account-nav {
+    color: var(--gray);
+}
+
+.searchbar {
+    padding: 10px 20px;
+    border-radius: 55px;
+}
+
+.searchbar .form-control {
+    border: none !important;
+    font-size: 0.875rem !important;
+}
+
+.searchbar__container-button {
+    max-width: 50px;
+}
+
+.searchbar__button {
+    background-color: var(--pink);
+    color: white;
+    transition: all 250ms ease;
+}
+
+.searchbar__button:hover {
+    background-color:hsl(348, 70%, 46%);
+    color: white;
+}
+
+.searchbar__button--lg {
+    height: 55px;
+    width: 55px;
+    position: absolute;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar__button--mobile {
+    width: 100%;
+}
+
+
+/* results style */
+.buttonNav{
+    background-color:transparent;
+    border-color: transparent;
+}
+
+.buttonFilter{
+    background-color:transparent;
+    border-color: transparent;
+}
+
+.plusIcon{
+    width: 30px;
+    height: 30px;
+    color: #F5385D;
+}
+
+.buttonReset{
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.buttonSetInfo{
+    border: 1px solid #808080;
+    border-radius: 20px;
+}
+
+
+.figureCard{
+    max-width: 100%;
+    height: 150px;
+}
+
+.figureCard img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardBnb div ion-icon{
+    color: #F5385D;
+}
+
+.cardsRow div p span{
+    font-weight: bolder;
+}
+
+.cardBnb a:hover {
+    text-decoration: underline!important;
+}
+
+.card-img {
+    max-width: 80px;
+}
+
+
+ul.navbar-nav, .searchbar {
+    transition: all 250ms ease;
+}
+
+.scale-0 {
+    transform: scale(0);
+}
+
+.searchbar--small {
+    transform: translateY(50%) scale(0.98);
+    column-gap: 1.5rem;
+    position: absolute;
+    top: 0;
+    font-size: 1rem;
+}
+
+.searchbar__button--small {
+    transform: scale(0.50) translateX(90%);
+    font-size: 1.2rem;
+    margin-right: 10%;
+}
+
+.card a:hover {
+    text-decoration: underline!important;
+}
+
+/* APARTMENT PAGE: GRID */
+.bi-star-fill {
+    color: var(--pink);
+}
+
+.img-big {
+    max-height: 400px;
+}
+
+.img-small {
+    max-height: 190px;
+}
+
+.grid-link {
+    text-decoration: none;
+    color: var(--gray);
+}
+
+/* BOOKING WINDOW */
+.booking-btn {
+    background-color: var(--pink);
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 30px;
+}
+
+.bookingBox {
+    top: 30px;
+    position: sticky;
+}
+
+/* REVIEW SECTION*/
+.avatar {
+    width: 50px;
+    height: 50px;
+}
+
+footer {
+    background-color: #F7F7F7;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--gray);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 768px) {
+    .img-big {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .img-small-top {
+        border-top-right-radius: 10px;
+    }
+    .img-small-bottom {
+        border-bottom-right-radius: 10px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .searchbar {
+        border-radius: 5px;
+        width: 100%;
+    }
+    .searchbar__container-button {
+        max-width: 100%;
+    }
+
+    .left-img {
+        padding-right: 0;
+    }
+}

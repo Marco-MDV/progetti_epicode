@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="roboto-regular">
+    <header class="bg-black py-2 sticky-lg-top top-0">
+        <div class="container-xl ">
+            <nav class="navbar navbar-expand-lg row ">
+                <div class="navbar-brand col-4 col-lg-3 me-0">
+                    <img src="./assets/logo.png" alt="" class="logo--white">
+                </div>
+                <div class="settings-nav col-8 order-lg-2 col-lg-3 justify-content-end d-flex">
+                    <ul class="nav gap-2 gap-xl-3 ">
+                        <li class="nav-item"><a href="" class="nav-link px-0  d-none d-md-block  text-white">Become a
+                                host</a></li>
+                        <li class="nav-item"><a href="" class="nav-link px-0  text-white "><i
+                                    class="bi bi-globe"></i></a></li>
+                        <li class="nav-item align-self-center ">
+                            <div
+                                class="rounded-pill bg-white account-nav d-flex justify-content-between gap-2 px-2 align-items-center ">
+                                <i class="bi fs-5 bi-list"></i>
+                                <i class="bi fs-4 bi-person-circle"></i>
+                            </div>
+                        </li>
+                        <li class="nav-item align-self-center ">
+                            <button class="navbar-toggler text-white pe-0 " type="button" data-bs-toggle="collapse"
+                                data-bs-target="#mainNav"><i class="bi bi-list"></i></button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse align-self-lg-start d-lg-flex justify-content-center order-lg-1 col-lg-6"
+                    id="mainNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="" class="nav-link text-white">Places to stay</a></li>
+                        <li class="nav-item"><a href="" class="nav-link text-white">Experiences</a></li>
+                        <li class="nav-item"><a href="" class="nav-link text-white">Online Experiences</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="row justify-content-center">
+                <div class="col-12 d-flex justify-content-md-center">
+                    <div class="searchbar bg-white small px-2 d-flex flex-column flex-md-row px-md-3 mt-3 mt-md-0 ">
+                        <div>
+                            <label for="locationInput" class="form-label m-0 small fw-bold ">Location</label>
+                            <input type="text" class="form-control small px-0 me-3 " id="locationInput"
+                                placeholder="Where are you going?">
+                        </div>
+                        <div>
+                            <label for="checkInInput" class="form-label m-0 small fw-bold ">Check-In</label>
+                            <input type="date" class="form-control small px-0 me-3  text-secondary " id="checkInInput">
+                        </div>
+                        <div>
+                            <label for="checkOutInput" class="form-label m-0 small fw-bold ">Check-Out</label>
+                            <input type="date" class="form-control small px-0 me-3  text-secondary " id="checkOutInput">
+                        </div>
+                        <div>
+                            <label for="guestsInput" class="form-label m-0 small fw-bold ">Guests</label>
+                            <input type="text" class="form-control small px-0 me-3  " id="guestsInput"
+                                placeholder="Add guests">
+                        </div>
+                        <div class="col px-0 d-flex align-items-center position-relative searchbar__container-button">
+                            <a href="results.html" role="button"
+                                class="btn rounded-circle searchbar__button searchbar__button--lg d-none d-md-flex "><i
+                                    class="bi bi-search"></i></a>
+                            <a href="results.html" role="button"
+                                class="btn searchbar__button searchbar__button--mobile d-md-none mt-2"><i
+                                    class="bi bi-search"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="hero" class="bg-black mb-5 ">
+        <div class="container-xxl">
+            <div class="row">
+                <div class="col-12 col-md-3 col-lg-2 d-flex align-items-center justify-content-center mt-3 ">
+                    <div class="hero__claim d-flex flex-column align-items-center align-items-md-start ">
+                        <h3 class="text-white display-1 roboto-bold lh-1">Go Near</h3>
+                        <button class="btn btn-light btn-sm hero__button small ">Explore nearby stays</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-9 col-lg-10 px-0 ">
+                    <div class="hero__img d-flex justify-content-center justify-content-md-start ">
+                        <img src="./assets/home.jpg" alt="" class="w-75 img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main class="container-xl py-5 ">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 pb-3 cards-container">
+            
+        </div>
+    </main>
+    <footer>
+        <div class="container-xl d-flex flex-column justify-content-between ">
+            <div class="row pb-3 mt-4 mx-1">
+                <div class="col-12 col-md-4 d-flex flex-column mt-4">
+                    <h6>Assistenza</h6>
+                    <a class="roboto-light text-black  small py-1 pb-2 " href="#">Centro Assistenza</a>
+                    <a class="roboto-light text-black  small py-1 pb-2 " href="#">AirCover</a>
+                    <a class="roboto-light text-black  small py-1 pb-2 " href="#">Antidiscriminazione</a>
+                    <a class="roboto-light text-black  small py-1 pb-2 " href="#">Supporto alla disabilità</a>
+                    <a class="roboto-light text-black  small py-1 pb-2 " href="#">Opzioni di cancellazione</a>
+                    <a class="roboto-light text-black  small py-1 pb-2 " href="#">Segnala problema nel quartiere</a>
+                </div>
+                <div class="col-12 col-md-4 d-flex flex-column mt-4">
+                    <h6>Ospitare</h6>
+                    <a class="roboto-light text-black  small py-1 pb-2 " href="#">Apri un Airbnb</a>
+                    <a class="roboto-light text-black  small py-1 pb-2 " href="#">AirCover per gli host</a>
+                    <a class="roboto-light text-black  small py-1 pb-2 " href="#">Risorse per gli host</a>
+                    <a class="roboto-light text-black  small py-1 pb-2 " href="#">Forum della community</a>
+                    <a class="roboto-light text-black  small py-1 pb-2 " href="#">Ospitare responsabilmente</a>
+                    <a class="roboto-light text-black  small py-1 pb-2 " href="#">Partecipa a una lezione gratuita
+                        sull'ospitalità</a>
+                </div>
+                <div class="col-12 col-md-4 d-flex flex-column mt-4">
+                    <h6>AirBnB</h6>
+                    <a class="roboto-light text-black  small py-1 pb-2 " href="#">Newsroom</a>
+                    <a class="roboto-light text-black  small py-1 pb-2 " href="#">Nuove funzionalità</a>
+                    <a class="roboto-light text-black  small py-1 pb-2 " href="#">Opportunità di lavoro</a>
+                    <a class="roboto-light text-black  small py-1 pb-2 " href="#">Investitori</a>
+                    <a class="roboto-light text-black  small py-1 pb-2 " href="#">Gift card</a>
+                    <a class="roboto-light text-black  small py-1 pb-2 " href="#">Soggiorni con Airbnb.org</a>
+                </div>
+            </div>
+            <div class="row mt-3 mx-1 border-top py-3 ">
+                <div class="col-12">
+                    <span class="roboto-light"> &#169; 2024 Airbnb, Inc.</span>
+                    <a class="small px-2 " href="#">Privacy</a> &#8901; <a class="small px-2 " href="#">Termini</a>
+                    &#8901;
+                    <a class="small px-2 " href="#">Mappa del sito</a> &#8901;
+                    <a class="small px-2 " href="#">Dettagli dell'azienda</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
