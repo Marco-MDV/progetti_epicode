@@ -13,12 +13,12 @@ const swiper = new Swiper('.swiper', {
 });
 
 function allFunction(){
-  scroll()
-  hoverColorIcon()
-  hoverCard()
+  scroll();
+  hoverColorIcon();
+  hoverCard();
   hoverSwiperRight();
   removePadding();
-  swiperMouseLeft()
+  swiperMouseLeft();
 }allFunction()
 
 

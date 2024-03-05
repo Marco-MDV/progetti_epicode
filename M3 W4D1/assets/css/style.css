@@ -231,3 +231,9 @@ body {
     font-size: 10px;
 }
 
+/* .buttonMoreOption:hover{
+ border-color: purple;
+ & ion-icon{
+    color: purple !important;
+ }
+} */
