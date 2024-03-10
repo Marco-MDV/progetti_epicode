@@ -127,19 +127,20 @@ function plusOne(str) {
 } plusOne('proviamo con una "o" in più')
 
 const plusTwo = (str1,str2) =>{
-    let arraystr2=str2.toLowerCase().split(' ').join('').split('')
+    let arraystr2=str2.replace(/[^\w]/g,'').toLowerCase().split(' ').join('').split('')
+    let str1Mod = str1.replace(/[^\w]/g,'').toLowerCase()
     let count = 0;
     /* console.log(arraystr2); */
     arraystr2.forEach(element => {
         /* console.log(element); */
-        const value = str1.search(element)
+        const value = str1Mod.search(element)
         if(value >= 0){
             count++
         }else if(value < 0){
             count--
         }
     });
-    if (count === str1.length) {
+    if (count === str1Mod.length) {
         console.log(true);
     }else{
         console.log(false);

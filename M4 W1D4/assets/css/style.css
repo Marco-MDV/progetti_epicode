@@ -1,0 +1,16 @@
+.myImgClass{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.maxWidth{
+    max-width: 540px !important;
+}
+
+@media screen and (max-width:425px) {
+    .myImgClass{
+        width: 100% !important;
+        object-fit: cover;
+    }
+}
