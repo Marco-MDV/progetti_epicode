@@ -1,0 +1,63 @@
+
+/*  header */
+
+.headerTitle{
+    -webkit-text-fill-color: rgb(13, 110, 253);
+    -webkit-text-fill-color: radial-gradient(circle, rgba(13, 110, 253, 1) 0%, rgba(40, 227, 235, 1) 35%, rgba(56, 148, 222, 1) 100%);
+    font-weight: bolder;
+    font-size: 100px;
+    letter-spacing: 20px;
+}
+
+/* navbar */
+
+#siteSearch{
+    border: 1px lightgray solid;
+    border-radius: 5px 0 0 5px;
+    outline-color:transparent;
+}
+
+.button{
+    border: 1px lightgray solid;
+    border-radius: 0 5px 5px 0;
+    & ion-icon{
+        color: lightgray;
+    }
+}
+
+.logoNav{
+    color: white;
+    font-weight: bolder;
+    letter-spacing: 10px;
+}
+
+/* user area */
+
+.userSpace button{
+    background-color: #0D6EFD;
+}
+
+.buttonUserArea{
+    border: 0 transparent solid;
+}
+
+.userSpace ion-icon{
+    color: lightgray;
+}
+
+
+
+
+
+
+/* media queries */
+
+@media screen and (max-width:991px) {
+   .logoNav{
+    letter-spacing: 5px;
+   }
+    .searchArea{
+        width: 50% !important;
+    }
+}
+
