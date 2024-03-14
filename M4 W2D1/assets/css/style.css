@@ -2,8 +2,12 @@
 /*  header */
 
 .headerTitle{
-    -webkit-text-fill-color: rgb(13, 110, 253);
-    -webkit-text-fill-color: radial-gradient(circle, rgba(13, 110, 253, 1) 0%, rgba(40, 227, 235, 1) 35%, rgba(56, 148, 222, 1) 100%);
+    background-color: rgb(13,110,253);
+    background-image: linear-gradient(94deg, #eeaeca, #94bbe9);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: bolder;
     font-size: 100px;
     letter-spacing: 20px;
@@ -31,6 +35,14 @@
     letter-spacing: 10px;
 }
 
+.dropdown-menu ul{
+    list-style: none;
+}
+
+.dropdown-menu ul li{
+    border-bottom: 1px lightgray solid;
+}
+
 /* user area */
 
 .userSpace button{
@@ -46,6 +58,75 @@
 }
 
 
+/* main */
+
+.cardStart{
+    width: 295px;
+    height: 200px;
+    border: 1px solid lightgrey;
+    border-radius: 20px;
+}
+
+
+/* footer */
+.listStyle div ul li{
+    list-style: none;
+}
+.listStyle div ul li h6{
+    color: white;
+}
+.listStyle div ul li a{
+    color: white;
+    text-decoration: none;
+}
+.dimensionFigure{
+    /* position: relative !important; */
+    max-height: 300px;
+    max-width: 300px;
+}
+.dimensionImg{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0px 0px 20px 2px transparent;
+}
+
+.photographer{
+    opacity: 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.price{
+    opacity: 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.saveButton{
+    background-color: #0D6EFD;
+    border: 1px #0D6EFD solid;
+    border-radius: 20px;
+    opacity: 0;
+}
+
+.dimensionFigure:hover{
+    & .dimensionImg{
+        animation: img 0.5s linear forwards;
+    }
+    & .saveButton{
+        animation: saveButton 0.5s linear forwards;
+    }
+    & .photographer{
+        animation: photographer 0.5s linear forwards;
+    }
+    & .price{
+        animation: price 0.5s linear forwards;
+    }
+}
 
 
 
@@ -53,6 +134,9 @@
 /* media queries */
 
 @media screen and (max-width:991px) {
+    .dimensionImg:hover{
+        animation: imgPhone 0.5s linear forwards !important;
+    }
    .logoNav{
     letter-spacing: 5px;
    }
@@ -61,3 +145,59 @@
     }
 }
 
+/* animation */
+
+@keyframes img {
+    from{
+        border-radius: 20px;
+        transform: scale(1);
+    }
+    to{
+        border-radius: 8px;
+        box-shadow: 0px 0px 20px 2px black;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes imgPhone {
+    from{
+        border-radius: 20px;
+    }
+    to{
+        border-radius: 8px;
+        box-shadow: 0px 0px 20px 2px black;
+    }
+}
+
+@keyframes saveButton {
+    from{
+        transform:translateY(70px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+@keyframes photographer {
+    from{
+        transform:translateY(-30px);
+        opacity: 0;
+    }
+    to{
+        transform:translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes price {
+    from{
+        transform:translateY(70px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(15px);
+        opacity:1;
+    }
+}
