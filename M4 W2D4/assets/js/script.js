@@ -1,19 +1,17 @@
-/* ricezione info dal serve */
-
 const spinner = () => {
     const main = document.querySelector('main')
     main.classList.add('calc')
     const rowForSpinner = document.querySelector('#rowForCard')
     rowForSpinner.innerHTML =
         `
-    <div class="col h-100" id="colSpinner">
-        <div class="h-100 d-flex justify-content-center align-items-center" id="spinner">
-            <div class="spinner-border text-success" role="status">
-                <span class="visually-hidden">Loading...</span>
+        <div class="col h-100" id="colSpinner">
+            <div class="h-100 d-flex justify-content-center align-items-center" id="spinner">
+                <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
             </div>
         </div>
-    </div>
-    `
+        `
 }
 
 const info = async () => {
@@ -21,7 +19,7 @@ const info = async () => {
     try {
         const info = await fetch('https://striveschool-api.herokuapp.com/books')
         const books = await info.json()
-
+        console.log(books);
         cards(books)
         filterBook(books)
     } catch (error) {
@@ -98,8 +96,9 @@ const cards = (books) => {
         buttonBuy.setAttribute('data-bs-target', '#staticBackdrop')
         buttonBuy.textContent = 'buy now'
 
+
         const badge = document.createElement('span')
-        badge.classList.add('badge', 'rounded-pill', 'text-bg-success', 'position-absolute', 'top-0', 'end-0', 'm-1', 'opacity-0')
+        badge.classList.add('badge', 'rounded-pill', 'text-bg-success', 'position-absolute', 'top-0', 'end-0', 'm-1', 'opacity-0','badgeAddList')
         badge.textContent = 'add list'
 
 
@@ -149,7 +148,6 @@ const whishlist = () => {
     const cardsBody = document.querySelectorAll('.card')
 
 
-    console.log(defaultValue);
     cardsBody.forEach(card => {
         card.querySelector('#buttonWishlist').addEventListener('click', () => {
             const title = card.querySelector('.card-title').textContent
@@ -255,6 +253,11 @@ const emptyCart = () => {
         total.textContent = 'totl Books: ' + arrayWhishlist.length
 
         modaBody.append(empty)
+        
+        const badgesAddList = document.querySelectorAll('.badgeAddList')
+        badgesAddList.forEach(badge=>{
+            badge.classList.remove('opacity-100')
+        })
     })
 }
 
@@ -266,6 +269,14 @@ const removeBook = (books) => {
         const removeButton = x.querySelector('.removeButton')
         removeButton.addEventListener('click', () => {
             x.remove(x)
+            const nameBook = x.querySelector('p').textContent
+            document.querySelectorAll('.card').forEach((book)=>{
+                const titleBook = book.querySelector('.card-title').textContent
+                if (nameBook === titleBook) {
+                    book.querySelector('.badgeAddList').classList.remove('opacity-100')
+                }
+            })
+            
             let element = x.textContent
             if (element in arrayWhishlist) {
                 console.log("La variabile è presente nell'array");
@@ -281,7 +292,6 @@ const removeBook = (books) => {
                     empty.textContent = 'The wishlist is empty'
                     modal.append(empty)
                 }
-            
             }
         })
     })
@@ -296,6 +306,7 @@ const filterBook = (books) => {
         })
     })
 }
+
 
 
 
