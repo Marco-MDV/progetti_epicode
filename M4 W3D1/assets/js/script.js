@@ -1,5 +1,3 @@
-/* ricezione info dal serve */
-
 const spinner = () => {
     const main = document.querySelector('main')
     main.classList.add('calc')
@@ -109,8 +107,7 @@ const cards = (books) => {
 
 
         const badge = document.createElement('span')
-        badge.setAttribute('id','badgeAddList')
-        badge.classList.add('badge', 'rounded-pill', 'text-bg-success', 'position-absolute', 'top-0', 'end-0', 'm-1', 'opacity-0')
+        badge.classList.add('badge', 'rounded-pill', 'text-bg-success', 'position-absolute', 'top-0', 'end-0', 'm-1', 'opacity-0','badgeAddList')
         badge.textContent = 'add list'
 
 
@@ -267,7 +264,7 @@ const emptyCart = () => {
 
         modaBody.append(empty)
         
-        const badgesAddList = document.querySelectorAll('#badgeAddList')
+        const badgesAddList = document.querySelectorAll('.badgeAddList')
         badgesAddList.forEach(badge=>{
             badge.classList.remove('opacity-100')
         })
@@ -286,7 +283,7 @@ const removeBook = (books) => {
             document.querySelectorAll('.card').forEach((book)=>{
                 const titleBook = book.querySelector('.card-title').textContent
                 if (nameBook === titleBook) {
-                    book.querySelector('#badgeAddList').remove('opacity-100')
+                    book.querySelector('.badgeAddList').classList.remove('opacity-100')
                 }
             })
             
