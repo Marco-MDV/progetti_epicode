@@ -1,0 +1,16 @@
+main{
+    height: calc(100vh - 178px);
+}
+
+.main2{
+    height: calc(100vh - 125px) !important;
+}
+
+.spinner {
+    height: 100%;
+}
+
+td {
+    word-break: break-word;
+}
+

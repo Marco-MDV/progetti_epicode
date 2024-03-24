@@ -1,7 +1,6 @@
 window.onload=()=>{
     const searchParams = new URLSearchParams(window.location.search)
     infoAsin(searchParams.get('asin'))
-
 }
 
 
