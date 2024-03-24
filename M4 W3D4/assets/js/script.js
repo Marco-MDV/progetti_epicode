@@ -154,12 +154,28 @@ const search = (users) => {
     });
 }
 
+
 /* risultati di ricerca */
 
 const newArrow = (searchUsers) => {
-    const tbody = document.querySelector('tbody')
-    tbody.innerHTML = ''
     rowNumber = 1
+
+    if (window.innerWidth > 583) {
+        newArrowPC(searchUsers)
+    } else if (window.innerWidth < 583) {
+        newArrowMobile(searchUsers)
+    }
+}
+
+/* new arrow for pc */
+
+const newArrowPC = (searchUsers) => {
+    main.innerHTML = ''
+
+    const tbody = document.createElement('tbody')
+    main.append(tbody)
+    
+    console.log('ciao');
     searchUsers.forEach(newUsers => {
         const tr = document.createElement('tr')
         tbody.append(tr)
@@ -177,7 +193,46 @@ const newArrow = (searchUsers) => {
         const td3 = document.createElement('td')
         td3.textContent = newUsers.email
 
-        tr.append(th, td1, td2, td3)
+        tr.append(th, td1, td2, td3) 
+    })
+}
+
+/* new Arrow mobile and tablet */
+
+const newArrowMobile = (searchUsers) => {
+    const main = document.querySelector('main')
+    console.log('ciao');
+    rowNumber = 1
+    main.innerHTML = ''
+    const dropdown = document.createElement('div')
+    dropdown.classList.add('dropdown', 'd-flex', 'justify-content-center', 'align-items-center', 'flex-column', 'gap-3', 'my-5')
+    main.append(dropdown)
+
+    searchUsers.forEach((user) => {
+        const button = document.createElement('button')
+        button.classList.add('btn', 'btn-secondary', 'dropdown-toggle', 'w-100')
+        button.setAttribute('type', 'button')
+        button.setAttribute('data-bs-toggle', 'dropdown')
+        button.setAttribute('aria-expanded', 'false')
+        button.textContent = rowNumber
+
+        rowNumber++
+
+        const dropdownMenu = document.createElement('ul')
+        dropdownMenu.classList.add('dropdown-menu')
+
+        const li1 = document.createElement('li')
+        li1.textContent = `name: ${user.name}`
+
+        const li2 = document.createElement('li')
+        li2.textContent = `username: ${user.username}`
+
+        const li3 = document.createElement('li')
+        li3.textContent = `email: ${user.email}`
+
+
+        dropdown.append(button, dropdownMenu)
+        dropdownMenu.append(li1, li2, li3)
     })
 }
 
@@ -236,5 +291,4 @@ const resize = (data) => {
 
 
 }
-
 
