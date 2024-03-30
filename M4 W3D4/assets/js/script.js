@@ -9,17 +9,16 @@ const spinner = () => {
     spinner.classList.add('spinner', 'd-flex', 'justify-content-center', 'align-items-center')
     main.append(spinner)
 }
-spinner()
 
 /* richiesta API */
 
 const info = async () => {
-
+    spinner() 
     try {
         const result = await fetch('https://jsonplaceholder.typicode.com/users')
         const data = await result.json()
         if (result.ok) {
-            console.log(data);
+
             resize(data)
 
             search(data)
@@ -28,7 +27,6 @@ const info = async () => {
 
             window.addEventListener('load', () => {
                 if (window.innerWidth > 583) {
-                    console.log('sono grande');
                     table(data)
                 } else if (window.innerWidth < 583) {
                     tableForSmartPhone(data)
@@ -141,11 +139,9 @@ const search = (users) => {
         inputs.forEach(input => {
             input.addEventListener('change', () => {
                 if (input.checked) {
-                    console.log(input.checked);
                     const text = inputsChecbox.querySelector('input + label').textContent.toLowerCase()
                     searchBar1.addEventListener('input', () => {
                         let searchUser = users.filter((user) => user[text].includes(searchBar1.value))
-                        console.log(searchUser);
                         newArrow(searchUser);
                     })
                 }
@@ -167,15 +163,15 @@ const newArrow = (searchUsers) => {
     }
 }
 
+
+
 /* new arrow for pc */
 
 const newArrowPC = (searchUsers) => {
-    main.innerHTML = ''
-
-    const tbody = document.createElement('tbody')
-    main.append(tbody)
+    const tableVariabile  = document.querySelector('table')
+    const tbody = tableVariabile.querySelector('tbody')
+    tbody.innerHTML = ''
     
-    console.log('ciao');
     searchUsers.forEach(newUsers => {
         const tr = document.createElement('tr')
         tbody.append(tr)
@@ -201,7 +197,6 @@ const newArrowPC = (searchUsers) => {
 
 const newArrowMobile = (searchUsers) => {
     const main = document.querySelector('main')
-    console.log('ciao');
     rowNumber = 1
     main.innerHTML = ''
     const dropdown = document.createElement('div')
@@ -282,7 +277,6 @@ const resize = (data) => {
 
     window.addEventListener('resize', () => {
         if (window.innerWidth > 583) {
-            console.log('sono grande');
             table(data)
         } else if (window.innerWidth < 583) {
             tableForSmartPhone(data)

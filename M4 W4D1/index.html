@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="bg-black text-white px-2">
+    <header class="flex justify-center items-center">
+        <h1 class="font-black text-4xl pb-5">Shoop</h1>
+    </header>
+
+    <nav class="flex justify-between items-center border-b-2 border-zinc-50 py-2">
+        <p class="font-black">MDV</p>
+        <div class="flex gap-5 md:gap-10 items-center">
+            <figure class="w-[35px] h-[35px]">
+                <img src="https://picsum.photos/200" alt="imgUser" class="w-full rounded-full ">
+            </figure>
+            <ul class="hidden lg:flex space-x-4">
+                <li><a href="./addElement.html">Add element</a></li>
+                <li><a href="./modifyOrDelete.html">Modify object</a></li>
+            </ul>
+
+            <div class="lg:hidden relative flex items-center justify-center">
+                <button class="w-[30px] h-[30px]" id="dropDown">
+                    <ion-icon name="grid-outline" class="w-full h-full"></ion-icon>
+                </button>
+
+                <ul class="flex absolute flex-col text-left list-none bg-withe border-solid border top-10 right-0 rounded hidden z-[3] bg-black" id="dropDownMenu">
+                    <li class="border-b-2 hover:bg-slate-200 py-1 px-2"><a href="./addElement.html">Add element</a></li>
+                    <li class="border-b-2 hover:bg-slate-200 py-1 px-2"><a href="./modifyOrDelete.html">Modify object</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="w-full h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 cardsContainer flex justify-center justify-items-center my-10 myMain">
+            
+        </div>
+    </main>
+
+    <footer class="border-t-2 border-zinc-50 grid grid-cols-2 md:grid-cols-3 gap-4 py-2">
+        <div class="flex justify-center">
+            <p>&copy; 2024 Example Page. <br>All rights reserved.</p>
+        </div>
+        <div class="flex justify-center">
+            <p>contact us: <span class="font-black">company@MDV.com</span></p>
+        </div>
+        <div class="hidden md:block">
+            <ul class="flex gap-4 items-center justify-center">
+                <li><a href="#" class="font-black">home</a></li>
+                <li><a href="#" class="font-black">contact</a></li>
+                <li><a href="#" class="font-black">jobs</a></li>
+                <li><a href="#" class="font-black">market</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./assets/js/bk.js"></script>
+    <script src="./assets/js/defaultPageAnimation.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

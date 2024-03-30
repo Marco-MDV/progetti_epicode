@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete object page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="bg-black text-white px-2">
+    <header class="flex justify-center items-center">
+        <h1 class="font-black text-4xl pb-5 text-center">Shoop - BackOffice</h1>
+    </header>
+
+    <nav class="flex justify-between items-center border-b-2 border-zinc-50 py-2">
+        <p class="font-black">MDV</p>
+        <div class="flex gap-5 md:gap-10 items-center">
+            <figure class="w-[35px] h-[35px]">
+                <img src="https://picsum.photos/200" alt="imgUser" class="w-full rounded-full ">
+            </figure>
+            <ul class="hidden lg:flex space-x-4">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./addElement.html">Add element</a></li>
+            </ul>
+
+            <div class="lg:hidden relative flex items-center justify-center">
+                <button class="w-[30px] h-[30px]" id="dropDown">
+                    <ion-icon name="grid-outline" class="w-full h-full"></ion-icon>
+                </button>
+
+                <ul class="flex absolute flex-col text-left list-none bg-withe border-solid border top-10 right-0 rounded hidden z-[3] bg-black" id="dropDownMenu">
+                    <li class="border-b-2 hover:bg-slate-200 py-1 px-2"><a href="./index.html">Home</a></li>
+                    <li class="border-b-2 hover:bg-slate-200 py-1 px-2"><a href="./addElement.html">Add element</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="mainAddElement grid grid-cols-1 flex justify-items-center items-center">
+        <table class="opacity-0 dark:bg-slate-800 md:w-1/2 text-center bg-slate-400 radius rounded-md">
+            <thead>
+                <tr class="p-2 border-2">
+                    <th class="p-2 border-r-2">name</th>
+                    <th class="p-2 hidden lg:table-cell border-r-2">description</th>
+                    <th class="p-2 border-r-2">brand</th>
+                    <th class="p-2 hidden lg:table-cell border-r-2">imageUrl</th>
+                    <th class="p-2 hidden md:table-cell border-r-2">price</th>
+                    <th class="p-2 hidden md:table-cell border-r-2">id</th>
+                    <th class="p-2 border-r-2">delete</th>
+                    <th class="p-2 border-r-2">modify</th>
+                </tr>
+            </thead>
+            <tbody class="border-2">
+                
+            </tbody>
+        </table>
+
+        <div class="opacity-0 modifyTable flex items-center justify-center bg-white w-auto md:w-1/2 h-auto z-[-10] text-black flex-col p-5 rounded-md fixed">
+            <div class="w-full text-center">
+                <h3 class="font-bold"> Modify </h3>
+                <p>please follow this input camp:</p>
+            </div>
+            <ul class="listModal w-full">
+                <li>
+                    <div>
+                        <label for="name">Name: </label>
+                        <br>
+                        <input type="text" placeholder="name" class="w-full" id="name">
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label for="description">Description: </label>
+                        <br>
+                        <input type="text" placeholder="description" class="w-full" id="description">
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label for="brand">Brand name: </label>
+                        <br>
+                        <input type="text" placeholder="brand" class="w-full" id="brand">
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label for="img">Image URL: </label>
+                        <br>
+                        <input type="text" placeholder="URL" class="w-full" id="imageUrl">
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label for="price">Price: </label>
+                        <br>
+                        <input type="number" placeholder="price" class="w-full" id="price">
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label for="price">Id: </label>
+                        <br>
+                        <input type="text" placeholder="id" class="w-full" id="id">
+                    </div>
+                </li>
+            </ul>
+
+            <div class="flex gap-10 justify-center w-full">
+                <button class="rounded-full px-3 py-1 hover:bg-slate-500 mt-4 border-2 black" id="sendObjectModify">Send</button>
+                <button class="rounded-full px-3 py-1 hover:bg-slate-500 mt-4 border-2 black" id="closedModal">closed</button>
+            </div>
+        </div>
+    </main>
+    <footer class="border-t-2 border-zinc-50 grid grid-cols-2 md:grid-cols-3 gap-4 py-2">
+        <div class="flex justify-center">
+            <p>&copy; 2024 Example Page. <br>All rights reserved.</p>
+        </div>
+        <div class="flex justify-center">
+            <p>contact us: <span class="font-black">company@MDV.com</span></p>
+        </div>
+        <div class="hidden md:block">
+            <ul class="flex gap-4 items-center justify-center">
+                <li><a href="#" class="font-black">home</a></li>
+                <li><a href="#" class="font-black">contact</a></li>
+                <li><a href="#" class="font-black">jobs</a></li>
+                <li><a href="#" class="font-black">market</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./assets/js/bk.js"></script>
+    <script src="./assets/js/defaultPageAnimation.js"></script>
+    <script src="./assets/js/scriptDelete.js"></script>
+</body>
+
+</html>
