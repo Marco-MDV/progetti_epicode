@@ -23,9 +23,16 @@ const opneModal = () => {
             imageUrl.value = ''
             price.value = ''
         }else{
-            alert('Devi inserire tutti i campi')
+            /* alert('Devi inserire tutti i campi') */
+            document.querySelector('.allert').classList.remove('opacity-0')
+            document.querySelector('.allert').classList.add('warning')
         }
     })
 
 }
 opneModal()
+
+document.querySelector('#close').addEventListener('click',() =>{
+    document.querySelector('.allert').classList.remove('warning')
+    document.querySelector('.allert').classList.add('opacity-0')
+})

@@ -18,7 +18,6 @@ const info = async () => {
         const result = await fetch('https://jsonplaceholder.typicode.com/users')
         const data = await result.json()
         if (result.ok) {
-
             resize(data)
 
             search(data)

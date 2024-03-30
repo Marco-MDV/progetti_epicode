@@ -1,8 +1,6 @@
 const ENDPOINT = 'https://striveschool-api.herokuapp.com/api/product/'
 const AUTORIZATIONKEY = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjAyZDE3MWU2MDQ3YjAwMTlmYTVmZjQiLCJpYXQiOjE3MTE0NjA3MjEsImV4cCI6MTcxMjY3MDMyMX0.tEZKDtdOiBHQiCffb4EUIOih66GDd5w2YdCIAlcsT74'
 
-
-
 /* GET */
 
 const requestInfo = async () => {

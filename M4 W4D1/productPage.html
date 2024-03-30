@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>add element page</title>
+    <title>delete object page</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -22,6 +22,7 @@
             </figure>
             <ul class="hidden lg:flex space-x-4">
                 <li><a href="./index.html">Home</a></li>
+                <li><a href="./addElement.html">Add element</a></li>
                 <li><a href="./modifyOrDelete.html">BackOffice</a></li>
             </ul>
 
@@ -32,68 +33,15 @@
 
                 <ul class="flex absolute flex-col text-left list-none bg-withe border-solid border top-10 right-0 rounded hidden z-[3] bg-black" id="dropDownMenu">
                     <li class="border-b-2 hover:bg-slate-200 py-1 px-2"><a href="./index.html">Home</a></li>
+                    <li class="border-b-2 hover:bg-slate-200 py-1 px-2"><a href="./addElement.html">Add element</a></li>
                     <li class="border-b-2 hover:bg-slate-200 py-1 px-2"><a href="./modifyOrDelete.html">BackOffice</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <main class="mainAddElement grid grid-cols-1 flex justify-items-center items-center">
-        <div class="flex items-center justify-center bg-white w-auto md:w-1/2 h-auto z-[3] text-black flex-col p-5 rounded-md ">
-            <div class="w-full">
-                <h3 class="font-bold">Hi, you can add new object</h3>
-                <p>please follow this input camp:</p>
-            </div>
-            <ul class="listModal w-full">
-                <li>
-                    <div>
-                        <label for="name">Name: </label>
-                        <br>
-                        <input type="text" placeholder="name" class="w-full" id="name">
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <label for="description">Description: </label>
-                        <br>
-                        <input type="text" placeholder="description" class="w-full" id="description">
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <label for="brand">Brand name: </label>
-                        <br>
-                        <input type="text" placeholder="brand" class="w-full" id="brand">
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <label for="img">Image URL: </label>
-                        <br>
-                        <input type="text" placeholder="https://..." class="w-full" id="imageUrl">
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <label for="price">Price: </label>
-                        <br>
-                        <input type="number" placeholder="price" class="w-full" id="price">
-                    </div>
-                </li>
-            </ul>
-
-            <button class="rounded-full px-3 py-1 hover:bg-slate-500 mt-4" id="sendObject">Send</button>
-        </div>
-        <div class="bg-[#FBD5D5] text-[#9B1C1C] fixed top-1 left-1 rounded-md opacity-0 allert">
-            <div class="flex justify-center items-center gap-5 py-2 px-5 relative">
-                <div class="w-[30px] h-[30px]">
-                    <ion-icon name="alert-circle-outline" class="color-[#9B1C1C] w-full h-full"></ion-icon>
-                </div>
-                <div>
-                    <h3 class=" border-b-2 border-[#9B1C1C] text-center">WARNING</h3>
-                    <p>You must enter all fields</p>
-                </div>
-                <button class="absolute top-0 right-1" id="close">X</button>
-            </div>
+    <main class="mainAddElement">
+        <div class="w-full h-full cardsContainer flex justify-center items-center myMain">
+            
         </div>
     </main>
     <footer class="border-t-2 border-zinc-50 grid grid-cols-2 md:grid-cols-3 gap-4 py-2">
@@ -116,7 +64,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="./assets/js/bk.js"></script>
     <script src="./assets/js/defaultPageAnimation.js"></script>
-    <script src="./assets/js/scriptAddElement.js"></script>
+    <script src="./assets/js/productPage.js"></script>
 </body>
 
 </html>

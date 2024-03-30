@@ -56,7 +56,7 @@ const createCard = (oggetti) => {
         const lastInfo = document.createElement('div')
         lastInfo.classList.add('lastInfo', 'flex', 'w-full', 'justify-between', 'items-center')
         const price = document.createElement('p')
-        price.textContent = `price: ${card.price}`
+        price.textContent = `price: ${card.price}€`
         const page = document.createElement('button')
         page.classList.add('bg-white', 'text-black', 'rounded-lg', 'p-2')
         const linkpage = document.createElement('a')

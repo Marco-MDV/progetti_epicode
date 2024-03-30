@@ -1,9 +1,8 @@
 
 
 const table = (elements)=>{
-    const table = document.createElement('table');
+    const table = document.querySelector('table');
     table.classList.remove('opacity-0')
-    table.classList.add('opacity-1')
     const tbody = document.querySelector('tbody')
     tbody.innerHTML = ''
     console.log(elements);
@@ -50,6 +49,7 @@ const table = (elements)=>{
             tdButtonDeletIconst.setAttribute('name', 'trash-outline')
             tdButtonDelet.append(tdButtonDeletIconst)
             tdButon1.append(tdButtonDelet)
+
         /* modify */
         const tdButon2 = document.createElement('td')
         tdButon2.classList.add('p-2')
@@ -89,38 +89,14 @@ const modify = () =>{
     rows.forEach(row =>{
         const ButtonModify = row.querySelector('.tdButtonModify')
         ButtonModify.addEventListener('click',() => {
-
-            /* mettiamo i valiri automaticamente */
-            const name = modal.querySelector('#name').value= row.querySelector('.tdName').textContent
-            const description = modal.querySelector('#description').value= row.querySelector('.tdDescription').textContent
-            const brand = modal.querySelector('#brand').value= row.querySelector('.tdBrand').textContent
-            const imageUrl = modal.querySelector('#imageUrl').value= row.querySelector('.tdImageUrl').textContent
-            const price = modal.querySelector('#price').value= row.querySelector('.tdPrice').textContent
-            const id = modal.querySelector('#id').value= row.querySelector('.tdId').textContent
-
-            
-
-            /* il problema è che non prende i valori aggiornati */
-            /* modal.querySelector('input').addEventListener('change',() => {
-                let nameP = modal.querySelector('#name').value
-                let descriptionP = modal.querySelector('#description').value
-                let brandP = modal.querySelector('#brand').value
-                let imageUrlP = modal.querySelector('#imageUrl').value
-                let priceP = modal.querySelector('#price').value
-                
-                console.log(object);
-            }) */
-
-            /* let object = {
-                name: name,
-                description: description,
-                brand: brand,
-                imageUrl: imageUrl,
-                price: price,
-            } */
-            
+            modal.querySelector('#name').value= row.querySelector('.tdName').textContent
+            modal.querySelector('#description').value= row.querySelector('.tdDescription').textContent
+            modal.querySelector('#brand').value= row.querySelector('.tdBrand').textContent
+            modal.querySelector('#imageUrl').value= row.querySelector('.tdImageUrl').textContent
+            modal.querySelector('#price').value= row.querySelector('.tdPrice').textContent
+            modal.querySelector('#id').value= row.querySelector('.tdId').textContent
             modifyTable.classList.add('animationModal')
-            /* sendObjectModify(id, object) */
+            sendObjectModify()
             closedModal()
             
 
@@ -128,30 +104,24 @@ const modify = () =>{
     })
 }
 
-const sendObjectModify = (id ,object) =>{ 
+const sendObjectModify = () =>{ 
     const sendObjectModify = document.querySelector('#sendObjectModify')
     sendObjectModify.addEventListener('click',() => {
         modifyTable.classList.remove('animationModal')
         modifyTable.classList.add('opacity-0','z-[-10]')
-        /* putRquest(id, object) */
-        /* requestInfo().then((response) => console.log(response)) */
-
-        /* const name = modifyTable.querySelector('#name').value
-        const description = modifyTable.querySelector('#description').value
-        const brand = modifyTable.querySelector('#brand').value
-        const imageUrl = modifyTable.querySelector('#imageUrl').value
-        const price = modifyTable.querySelector('#price').value */
-        
-        /* let objectx = {
-            name: name,
-            description: description,
-            brand: brand,
-            imageUrl: imageUrl,
-            price: price,
-        } */
-
-        /* console.log(objectx); */
-        console.log(putRquest(id, object));
+        console.log(document.querySelector('#name').value);
+        let object = {
+            name: document.querySelector('#name').value,
+            description: document.querySelector('#description').value,
+            brand: document.querySelector('#brand').value,
+            imageUrl: document.querySelector('#imageUrl').value,
+            price: document.querySelector('#price').value,
+        }
+        let id = document.querySelector('#id').value
+        putRquest(id, object)
+        requestInfo().then(res => {
+            table(res) 
+        })
     })
 }
 

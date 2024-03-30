@@ -27,7 +27,6 @@ const tablePresentObject = (elements)=>{
         tdId.textContent = element._id
         const tdButtonDelet = document.createElement('button','table-cell')
         tdButtonDelet.classList.add('rounded-full', 'px-3', 'py-1', 'hover:bg-slate-500','tdButtonDelet')
-        /* tdButtonDelet.textContent = 'Delete' */
         tdButtonDelet.innerHTML=<ion-icon name="trash-outline"></ion-icon>
         tr.append(tdName, tdDescription, tdBrand, tdImageUrl, tdPrice, tdId , tdButtonDelet)
     });
