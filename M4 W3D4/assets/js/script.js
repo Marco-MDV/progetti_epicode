@@ -9,15 +9,16 @@ const spinner = () => {
     spinner.classList.add('spinner', 'd-flex', 'justify-content-center', 'align-items-center')
     main.append(spinner)
 }
-
+spinner() 
 /* richiesta API */
 
 const info = async () => {
-    spinner() 
+
     try {
         const result = await fetch('https://jsonplaceholder.typicode.com/users')
         const data = await result.json()
         if (result.ok) {
+            main.innerHTML =''
             resize(data)
 
             search(data)
@@ -32,6 +33,9 @@ const info = async () => {
                 }
             })
 
+        }else{
+            alert(error.message)
+            alert(result.message)
         }
     } catch (error) {
         console.log(error);
