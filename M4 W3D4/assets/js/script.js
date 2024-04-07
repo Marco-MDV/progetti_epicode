@@ -9,7 +9,8 @@ const spinner = () => {
     spinner.classList.add('spinner', 'd-flex', 'justify-content-center', 'align-items-center')
     main.append(spinner)
 }
-spinner() 
+spinner()
+ 
 /* richiesta API */
 
 const info = async () => {
@@ -18,20 +19,19 @@ const info = async () => {
         const result = await fetch('https://jsonplaceholder.typicode.com/users')
         const data = await result.json()
         if (result.ok) {
-            main.innerHTML =''
+            console.log(result);
             resize(data)
-
             search(data)
 
             /* scelta iniziale del tipo di paggina da far vedere*/
 
-            window.addEventListener('load', () => {
-                if (window.innerWidth > 583) {
-                    table(data)
-                } else if (window.innerWidth < 583) {
-                    tableForSmartPhone(data)
-                }
-            })
+            if (window.innerWidth > 583) {
+                console.log('pc');
+                table(data)
+            } else if (window.innerWidth < 583) {
+                console.log('smartphone');
+                tableForSmartPhone(data)
+            }
 
         }else{
             alert(error.message)
@@ -42,7 +42,6 @@ const info = async () => {
     }
 }
 info()
-
 
 /* filtro per i togler */
 
